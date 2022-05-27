@@ -1,0 +1,204 @@
+.App {
+  padding: 0;
+}
+.mobile-nav {
+  display: none;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  color: white;
+  background-color: rgb(136, 0, 0);
+}
+nav > a {
+  text-decoration: none;
+  color: white;
+}
+nav > a:hover > h1 {
+  opacity: 0.6;
+}
+nav > * {
+  border: 1px solid white;
+  padding: 1em 1em;
+}
+ul {
+  list-style: none;
+}
+nav > ul {
+  display: flex;
+  margin-right: 10em;
+  border: none;
+  flex-direction: row;
+}
+nav > ul > a {
+  text-decoration: none;
+  margin-right: 1em;
+  font-size: 1em;
+  color: white;
+}
+nav > ul > a:hover > li {
+  opacity: 0.6;
+}
+nav > ul > li {
+  padding: 2em;
+  border: 1px solid white;
+  margin-inline: 2em;
+}
+
+nav > ul > li:hover {
+  background-color: rgb(126, 49, 49);
+}
+.settings {
+  place-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.settings > img:hover {
+  background-color: rgb(49, 45, 46);
+  transform: rotate(100deg);
+}
+
+.settings > ul {
+  display: none;
+  background: grey;
+  padding: 0;
+  position: absolute;
+  margin-top: 5em;
+}
+.settings > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+.settings:hover .settings > ul {
+  display: block;
+}
+.settings > ul > li {
+  padding: 2em 1em;
+  color: white;
+  border: 1px solid white;
+  background-color: #c02d23;
+}
+.settings > ul > li:hover {
+  background-color: #bd635d;
+}
+.settings > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: 0.5s ease-in;
+}
+.link > a {
+  text-decoration: none;
+  color: white;
+}
+.link > a:hover {
+  text-decoration: underline;
+}
+.State {
+  text-align: center;
+  text-transform: capitalize;
+}
+.CityDetails {
+  text-align: center;
+}
+.CityDetails > * {
+  margin-top: 2em;
+}
+.CityDetails > h1 {
+  text-transform: capitalize;
+}
+.CityDetails > label {
+  font-size: 2em;
+  padding: 2em;
+}
+.cityContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#visited {
+  height: 2em;
+  width: 2em;
+}
+.FormContainer {
+  text-align: center;
+}
+.Form {
+  width: 50%;
+  display: grid;
+  margin: auto;
+  text-align: center;
+}
+.Form > label::after {
+  content: ":";
+}
+.Form > input {
+  width: 80%;
+  padding: 0.5em;
+  margin: 1em auto;
+}
+#submit {
+  background-color: rgb(24, 223, 47);
+  border: none;
+  color: white;
+  border-radius: 0.5em;
+}
+#cancel {
+  background-color: rgb(209, 26, 26);
+  border: none;
+  color: white;
+
+  border-radius: 0.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(41, 43, 44);
+  }
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+  .App {
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-nav {
+    display: block;
+    height: 2em;
+    width: 2em;
+  }
+  .mobile-nav > span {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(49, 45, 46);
+  }
+  .nav-bar {
+    display: none;
+  }
+  .App > .nav-bar > nav {
+    height: 100vh;
+    width: 30%;
+    background-color: rgb(136, 0, 0);
+    flex-direction: column;
+  }
+  nav > ul {
+    flex-direction: column;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .settings {
+    display: flex;
+    background-color: transparent;
+  }
+  .settings > ul {
+    background-color: transparent;
+  }
+  .settings > ul > li {
+    margin-top: 2em;
+  }
+}
